@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NSS EDGK | Admin Login</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f2f6fc;
+      padding: 20px;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 420px;
+      padding: 32px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 10px 35px #12335b15;
+    }
+
+    .login-box h1 {
+      color: #12335b;
+      margin-bottom: 8px;
+    }
+
+    .login-box p {
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+
+    .login-box label {
+      display: block;
+      margin: 14px 0 5px;
+      font-weight: bold;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 13px;
+      border: 0;
+      border-radius: 6px;
+      background: #12335b;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .notice {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main class="login-box">
+    <h1>NSS EDGK</h1>
+    <p>School Administration Portal</p>
+
+    <form id="login-form">
+      <label for="email">Administrator Email</label>
+      <input id="email" type="email" autocomplete="username"
+        placeholder="admin@example.com" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password"
+        autocomplete="current-password"
+        placeholder="Enter your password" required>
+
+      <button type="submit">Log In</button>
+      <div class="notice" id="notice" role="status"></div>
+    </form>
+
+    <p style="margin-top:20px">
+      <a href="../index.html">← Return to school website</a>
+    </p>
+  </main>
+
+  <script>
+    document.getElementById("login-form").addEventListener(
+      "submit",
+      function (event) {
+        event.preventDefault();
+
+        document.getElementById("notice").textContent =
+          "Login is not connected yet. Configure a secure authentication backend before using this portal.";
+      }
+    );
+  </script>
+</body>
+</html>
+ 
